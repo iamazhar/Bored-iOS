@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D9A2564CD5CC42F063FD203 /* Pods_Bored.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F61BF540B9C63D3B42D1462 /* Pods_Bored.framework */; };
+		FF131DAC2147BBAB00F14576 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF131DAB2147BBAB00F14576 /* Animations.swift */; };
 		FF22107F21412F5C00E1B5D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF22107E21412F5C00E1B5D2 /* AppDelegate.swift */; };
 		FF22108121412F5C00E1B5D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF22108021412F5C00E1B5D2 /* ViewController.swift */; };
 		FF22108421412F5D00E1B5D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF22108221412F5D00E1B5D2 /* Main.storyboard */; };
 		FF22108621412F5E00E1B5D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF22108521412F5E00E1B5D2 /* Assets.xcassets */; };
 		FF22108921412F5E00E1B5D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF22108721412F5E00E1B5D2 /* LaunchScreen.storyboard */; };
+		FF7C1C4E214174EA009A8B72 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7C1C4D214174EA009A8B72 /* APIService.swift */; };
+		FF7C1C50214175E2009A8B72 /* RandomActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7C1C4F214175E2009A8B72 /* RandomActivity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3AD3A1FCFE966CD29D99F7D5 /* Pods-Bored.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bored.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bored/Pods-Bored.debug.xcconfig"; sourceTree = "<group>"; };
+		6F61BF540B9C63D3B42D1462 /* Pods_Bored.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bored.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D940C62B209C497EEE167454 /* Pods-Bored.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bored.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bored/Pods-Bored.release.xcconfig"; sourceTree = "<group>"; };
+		FF131DAB2147BBAB00F14576 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		FF22107B21412F5C00E1B5D2 /* Bored.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bored.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF22107E21412F5C00E1B5D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF22108021412F5C00E1B5D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +30,8 @@
 		FF22108521412F5E00E1B5D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF22108821412F5E00E1B5D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF22108A21412F5E00E1B5D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF7C1C4D214174EA009A8B72 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		FF7C1C4F214175E2009A8B72 /* RandomActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomActivity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D9A2564CD5CC42F063FD203 /* Pods_Bored.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53FB469CA7EE39E77958C2A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F61BF540B9C63D3B42D1462 /* Pods_Bored.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7BA0AE1B5D4C7BAB2A33D40B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AD3A1FCFE966CD29D99F7D5 /* Pods-Bored.debug.xcconfig */,
+				D940C62B209C497EEE167454 /* Pods-Bored.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF131DAA2147BB8F00F14576 /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				FF131DAB2147BBAB00F14576 /* Animations.swift */,
+			);
+			path = Extras;
+			sourceTree = "<group>";
+		};
 		FF22107221412F5C00E1B5D2 = {
 			isa = PBXGroup;
 			children = (
 				FF22107D21412F5C00E1B5D2 /* Bored */,
 				FF22107C21412F5C00E1B5D2 /* Products */,
+				7BA0AE1B5D4C7BAB2A33D40B /* Pods */,
+				53FB469CA7EE39E77958C2A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +93,48 @@
 			isa = PBXGroup;
 			children = (
 				FF22107E21412F5C00E1B5D2 /* AppDelegate.swift */,
-				FF22108021412F5C00E1B5D2 /* ViewController.swift */,
-				FF22108221412F5D00E1B5D2 /* Main.storyboard */,
+				FF131DAA2147BB8F00F14576 /* Extras */,
+				FFC3AD7C2147AAD2004E63FA /* Services */,
+				FFC3AD7A2147AABA004E63FA /* Controllers */,
+				FFC3AD7D2147AAED004E63FA /* Models */,
+				FFC3AD7E2147AAFA004E63FA /* Views */,
 				FF22108521412F5E00E1B5D2 /* Assets.xcassets */,
 				FF22108721412F5E00E1B5D2 /* LaunchScreen.storyboard */,
 				FF22108A21412F5E00E1B5D2 /* Info.plist */,
 			);
 			path = Bored;
+			sourceTree = "<group>";
+		};
+		FFC3AD7A2147AABA004E63FA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FF22108021412F5C00E1B5D2 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FFC3AD7C2147AAD2004E63FA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FF7C1C4D214174EA009A8B72 /* APIService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FFC3AD7D2147AAED004E63FA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FF7C1C4F214175E2009A8B72 /* RandomActivity.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FFC3AD7E2147AAFA004E63FA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FF22108221412F5D00E1B5D2 /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +144,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF22108D21412F5E00E1B5D2 /* Build configuration list for PBXNativeTarget "Bored" */;
 			buildPhases = (
+				2B0E615372A2B53CACE5434F /* [CP] Check Pods Manifest.lock */,
 				FF22107721412F5C00E1B5D2 /* Sources */,
 				FF22107821412F5C00E1B5D2 /* Frameworks */,
 				FF22107921412F5C00E1B5D2 /* Resources */,
+				F64ABF25E18DD99DB0FA871F /* [CP] Embed Pods Frameworks */,
+				7153A25AE9987658DB764EE5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,12 +206,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2B0E615372A2B53CACE5434F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bored-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7153A25AE9987658DB764EE5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bored/Pods-Bored-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F64ABF25E18DD99DB0FA871F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Bored/Pods-Bored-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bored/Pods-Bored-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FF22107721412F5C00E1B5D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FF22108121412F5C00E1B5D2 /* ViewController.swift in Sources */,
+				FF131DAC2147BBAB00F14576 /* Animations.swift in Sources */,
+				FF7C1C50214175E2009A8B72 /* RandomActivity.swift in Sources */,
+				FF7C1C4E214174EA009A8B72 /* APIService.swift in Sources */,
 				FF22107F21412F5C00E1B5D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +411,7 @@
 		};
 		FF22108E21412F5E00E1B5D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AD3A1FCFE966CD29D99F7D5 /* Pods-Bored.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +430,7 @@
 		};
 		FF22108F21412F5E00E1B5D2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D940C62B209C497EEE167454 /* Pods-Bored.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
