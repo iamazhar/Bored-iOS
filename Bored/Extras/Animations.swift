@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 enum Animations{
+    
+    //Animate a filter view
     static func animatePopUp(filterView: UIView, view: UIView, visualEffectView: UIVisualEffectView){
         view.addSubview(filterView)
         filterView.center = view.center
@@ -30,6 +32,7 @@ enum Animations{
         })
     }
     
+    //Animate out the filter view
     static func animateOut(filterView: UIView, visualEffectView: UIVisualEffectView){
         UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseInOut, animations: {
             filterView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
@@ -41,4 +44,5 @@ enum Animations{
             filterView.removeFromSuperview()
         }
     }
+    
 }

@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var activityTypeLabel: UILabel!
     @IBOutlet weak var participantsLabel: UILabel!
     @IBOutlet weak var instructionLabel: UILabel!
+    @IBOutlet weak var activityButton: UIButton!
     
     var randomActivity: RandomActivity?
     
@@ -30,7 +31,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loadActivityPressed(_ sender: Any) {
-        loadNewActivity()
+        UIView.animate(withDuration: 0.6, delay: 0.1, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.8, options: .curveEaseInOut, animations: {
+            self.activityButton.transform = CGAffineTransform(scaleX: 30.0, y: 30.0)
+        }) { (success) in
+            print("Animation successful")
+            self.loadNewActivity()
+            UIView.animate(withDuration: 0.6, delay: 0.5, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.8, options: .curveEaseInOut, animations: {
+                self.activityButton.transform = CGAffineTransform.identity
+            })
+        }
+        
     }
     
     override func viewDidLoad() {
@@ -44,20 +54,32 @@ class ViewController: UIViewController {
             self.randomActivity = APIService.shared.performActivityRequest()
             guard let activity = self.randomActivity else{return}
             self.activityLabel.text = activity.activity
-            self.changeViewsColor()
+            self.activityLabel.isHidden = false
+            self.activityButton.isHidden = false
+            self.instructionLabel.isHidden = false
+            
+            self.view.backgroundColor = UIColor.randomFlat
+            if let backgroundColor = self.view.backgroundColor{
+                self.changeViewsColor(backgroundColor: backgroundColor)
+            }
         }
     }
 
 }
 
 extension ViewController{
-    func changeViewsColor(){
-        self.view.backgroundColor = UIColor.randomFlat
-        if let backgroundColor = self.view.backgroundColor{
+    func changeViewsColor(backgroundColor: UIColor){
+        
+        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseInOut, animations: {
             self.setStatusBarStyle(UIStatusBarStyleContrast)
-            activityLabel.textColor = UIColor(contrastingBlackOrWhiteColorOn: backgroundColor, isFlat: true)
-            instructionLabel.textColor = UIColor(contrastingBlackOrWhiteColorOn: backgroundColor, isFlat: true)
-            instructionLabel.alpha = 0.5
+            self.activityButton.backgroundColor = UIColor(contrastingBlackOrWhiteColorOn: backgroundColor, isFlat: true)
+            
+            self.activityLabel.textColor = UIColor(contrastingBlackOrWhiteColorOn: backgroundColor, isFlat: true)
+            
+            self.instructionLabel.textColor = UIColor(contrastingBlackOrWhiteColorOn: backgroundColor, isFlat: true)
+            self.instructionLabel.alpha = 0.8
+        }) { (success) in
+            //
         }
     }
 }

@@ -18,24 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qby-5v-5OK">
-                                <rect key="frame" x="157" y="540" width="60" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Tk1-4T-tnY"/>
-                                    <constraint firstAttribute="width" constant="60" id="pJP-VE-tJk"/>
-                                </constraints>
-                                <state key="normal" image="shuffle"/>
-                                <connections>
-                                    <action selector="loadActivityPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HY2-Bd-RmH"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the button above or shake your phone for something new" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiV-Ni-0R8">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the button above or shake your phone for something new" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiV-Ni-0R8">
                                 <rect key="frame" x="42" y="608" width="291.5" height="38.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                 <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write a thank you letter to an influential person in your life" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6GF-P1-SGJ">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write a thank you letter to an influential person in your life" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6GF-P1-SGJ">
                                 <rect key="frame" x="16" y="70" width="343" height="439"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="439" id="sfD-BI-zV6"/>
@@ -44,6 +33,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qby-5v-5OK">
+                                <rect key="frame" x="157" y="540" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Tk1-4T-tnY"/>
+                                    <constraint firstAttribute="width" constant="60" id="pJP-VE-tJk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loadActivityPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HY2-Bd-RmH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -66,6 +71,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="activityButton" destination="qby-5v-5OK" id="MUM-Fz-E3a"/>
                         <outlet property="activityLabel" destination="6GF-P1-SGJ" id="8VP-uh-DZG"/>
                         <outlet property="filterView" destination="Gfg-yw-2Qy" id="4uG-6s-b8i"/>
                         <outlet property="instructionLabel" destination="EiV-Ni-0R8" id="NcD-tj-SKO"/>
@@ -138,6 +144,5 @@
     </scenes>
     <resources>
         <image name="close" width="15" height="15"/>
-        <image name="shuffle" width="60" height="60"/>
     </resources>
 </document>
